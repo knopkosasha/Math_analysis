@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt,fleqn]{article}
+
+%% Работа с русским языком
+
+		% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+%% Отступы между абзацами и в начале абзаца 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\medskipamount}
+
+%% Изменяем размер полей
+\usepackage[top=0.5in, bottom=0.75in, left=0.625in, right=0.625in]{geometry}
+
+%% Графика
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+%% Различные пакеты для работы с математикой
+\usepackage{amssymb}				% Математические символы
+\usepackage{amsthm}					% Пакет для написания теорем
+\usepackage{amstext}
+\usepackage{array}
+\usepackage{amsfonts}
+\usepackage{icomma}					% "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{bbm}				    % Для красивого (!) \mathbb с  буквами и цифрами
+\usepackage{enumitem}               % Для выравнивания itemise (\begin{itemize}[align=left])
+\usepackage{amsmath}
+
+
+% Ссылки
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+
+% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}	 % Красивый матшрифт
+
+% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+% Графики
+\usepackage{tikz}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.12}
+
+% Изменим формат \section и \subsection:
+\usepackage{titlesec}
+\titleformat{\section}
+{\vspace{0cm}\centering\LARGE\bfseries}	% Стиль заголовка
+{}										% префикс
+{0pt}									% Расстояние между префиксом и заголовком
+{} 										% Как отображается префикс
+\titleformat{\subsection}				% Аналогично для \subsection
+{\Large\bfseries}
+{}
+{0pt}
+{}
+
+% Информация об авторах
+\author{ПММ ФИИТ 2016-2020
+		\\ Маслакова Александра}
+\title{Лекции по предмету \\
+	\textbf{Математический анализ}}
+\date{2016-2017 гг}
+
+\newtheorem*{Def}{Определение}
+\newtheorem{Lemma}{Лемма}
+\newtheorem*{Consequence}{Следствие}
+\newtheorem*{Theorem}{Теорема}
+\newtheorem*{Properties}{Свойства}
+\newtheorem*{Example}{Пример}
+\theoremstyle{remark}
+\newtheorem*{Comment}{Замечание}
+
+\newcommand{\D}{\,\mathrm{d}}
